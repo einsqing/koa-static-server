@@ -5,12 +5,7 @@ var logger = require('koa-logger');
 
 app.use(logger());
 
-app.use(serve({rootDir: './browser/src/home', rootPath: ''}));
-app.use(serve({rootDir: './browser/src/admin', rootPath: '/admin'}));
-app.use(serve({rootDir: './browser/src/app', rootPath: '/app'}));
-app.use(serve({rootDir: './browser/src/public', rootPath: '/public'}));
-app.use(serve({rootDir: './browser/src/addon', rootPath: '/addon'}));
-app.use(serve({rootDir: './browser/src/smart', rootPath: '/smart'}));
+app.use(serve({rootDir: './browser/src', rootPath: ''}));
 
 app.on('error', function (err, ctx) {
     console.log(err);
